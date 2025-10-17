@@ -10,7 +10,7 @@ O objetivo final do laboratório é responder à seguinte questão, encontrando 
 
 > **"What is the password used by WordPress to connect to the database?"**
 
-![[Images/01-desafio.png]]
+![Enunciado do Desafio](Images/01-desafio.png)
 
 Para alcançar esse objetivo, este documento detalha o processo de exploração de uma vulnerabilidade no plugin "Pie Register" para obter acesso administrativo, executar código remotamente (RCE) e, finalmente, ler o arquivo `wp-config.php` para encontrar a senha do banco de dados.
 
