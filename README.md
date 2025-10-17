@@ -10,7 +10,7 @@ O objetivo final do laboratório é responder à seguinte questão, encontrando 
 
 > **"What is the password used by WordPress to connect to the database?"**
 
-![Enunciado do Desafio](Images/01-desafio.png)
+![Enunciado do Desafio](Images/01-desafio.png.png)
 
 Para alcançar esse objetivo, este documento detalha o processo de exploração de uma vulnerabilidade no plugin "Pie Register" para obter acesso administrativo, executar código remotamente (RCE) e, finalmente, ler o arquivo `wp-config.php` para encontrar a senha do banco de dados.
 
@@ -51,13 +51,13 @@ wpscan --url http://172.20.7.90 --enumerate p
 ```
 
 O resultado do WPScan foi crucial, identificando a presença do plugin **"Pie Register"** e detectando sua versão como **3.7.1.4**.
-![](Images/02-wpscan.png)
+![Resultado do WPScan](Images/02-wpscan.png.png)
 ### 1.2 - Confirmação da Vulnerabilidade no Exploit-DB
 
 Com o nome e a versão do plugin em mãos, o próximo passo foi pesquisar por vulnerabilidades conhecidas em bancos de dados públicos. Uma busca rápida no **Exploit-DB** confirmou as suspeitas.
 
 A pesquisa revelou uma entrada crítica para a versão 3.7.1.4: **Authentication Bypass to RCE**. Isso confirmou que havia um caminho claro para a exploração.
-![](Images/03-exploitdb.png)
+![Vulnerabilidade no Exploit-DB](Images/03-exploitdb.png.png)
 
 Com a vulnerabilidade confirmada, o plano de ataque estava definido. A próxima fase seria explorar essa falha para obter acesso não autorizado.
 
@@ -95,7 +95,7 @@ Imediatamente após a execução do comando, o conteúdo do arquivo `cookies.txt
 cat cookies.txt
 ```
 O resultado foi inequívoco. O arquivo continha o cookie `wordpress_logged_in_...`, a chave necessária para o acesso administrativo total.
-![](Images/04-cookie.png)
+![Cookie de Admin no cookies.txt](Images/04-cookie.png.png)
 
 Com o cookie de administrador em mãos, o acesso ao painel estava garantido, e o caminho para a execução remota de código (RCE) estava aberto.
 
@@ -178,7 +178,7 @@ curl -v -b cookies.txt -F "_wpnonce=44fc9fb434" -F "pluginzip=@caniveteplugin.zi
 
 A resposta do servidor foi a recompensa por toda a investigação: a confirmação de que o acesso era legítimo. O ==nonce== era válido e o plugin foi instalado com sucesso.
 
-![](Images/05-instalacao.png)
+![Instalação do Plugin com Sucesso](Images/05-instalacao.png.png)
 
 
 ---
@@ -198,7 +198,7 @@ curl "http://172.20.7.90/wp-content/plugins/caniveteplugin/canivete.php?cmd=find
 ```
 O comando retornou o caminho absoluto do arquivo de configuração: `/var/www/html/wp-config.php`.
 
-![](Images/06-find.png)
+![Encontrando o Caminho do wp-config.php](Images/06-find.png.png)
 
 ### 4.2 - Lendo o Arquivo e Obtendo a Senha
 
@@ -207,7 +207,7 @@ Com o caminho exato do arquivo em mãos, um último comando `curl` foi executado
 ```bash
 curl "http://172.20.7.90/wp-content/plugins/caniveteplugin/canivete.php?cmd=cat%20/var/www/html/wp-config.php" | grep "DB_PASSWORD"
 ```
-![](Images/07-senha.png)
+![Senha do Banco de Dados Revelada](Images/07-senha.png.png)
 
 
 ---
