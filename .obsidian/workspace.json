@@ -1,0 +1,189 @@
+{
+  "main": {
+    "id": "6c5f344e46d50b89",
+    "type": "split",
+    "children": [
+      {
+        "id": "b1785f07a9efd3bf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8c7540451e6e4d8c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "36473ef717313a2a",
+    "type": "split",
+    "children": [
+      {
+        "id": "885c78082134eb9e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8848199d44bec3ec",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "ad38a5a03ba6b300",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "b7760a8b33f67fcf",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "832d5f7c8919c884",
+    "type": "split",
+    "children": [
+      {
+        "id": "0eabfac29617552b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b9f4b573ef8ce3ad",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Links inversos para README"
+            }
+          },
+          {
+            "id": "99e120bf83d1a1fd",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída para README"
+            }
+          },
+          {
+            "id": "e038facf6e8ffce6",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "4123d4fbd3d1b7b8",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Sumário de README"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Criar nova base": false
+    }
+  },
+  "active": "8848199d44bec3ec",
+  "lastOpenFiles": [
+    "Images/07-senha.png.png",
+    "Images/06-find.png.png",
+    "Images/05-instalacao.png.png",
+    "Images/04-cookie.png.png",
+    "Images/03-exploitdb.png.png",
+    "README.md",
+    "Images/02-wpscan.png.png",
+    "Images/01-desafio.png.png",
+    "Images/Pasted image 20251016103040.png",
+    "Images/Pasted image 20251016103033.png",
+    "Images/Pasted image 20251016103011.png",
+    "Images/Pasted image 20251016102942.png",
+    "Images",
+    "repositorio de imagens para construção.md"
+  ]
+}
