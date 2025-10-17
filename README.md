@@ -1,5 +1,3 @@
-# Hackviser---Hacking-WordPress---WriteUp
-
 # Write-Up: Hacking WordPress - Laboratório CWSE
 
 ## 🎯 Visão Geral do Laboratório
